@@ -79,12 +79,14 @@ function resetPage() {
         e.preventDefault; 
         this.blur(); 
         $("#levels").hide('slow');
+        $("#about").hide('fast');
         $("#goBack").show('fast');
         $("#theWords").empty();
         return loadWords($(this).attr('class'), wordCount); 
     });
     $("#goBack").on('click', function(e) {
         $("#wrapper").hide('fast');
+        $("#about").show('slow');
         $("#levels").show('fast');
         $("#goBack").hide('fast');
     });
