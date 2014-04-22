@@ -12,7 +12,7 @@ $(function(){
     $("#btn-first").on("click",function(e){
         //console.log(theWords);
         counter = 0;
-        console.log(counter + " of " + theWords.length);
+        //console.log(counter + " of " + theWords.length);
         $(".flipbox").flippy({
             color_target: theColour, //"red",
             direction: "left",
@@ -23,10 +23,9 @@ $(function(){
     });
     
     $("#btn-prev").on("click",function(e){
-
         counter = counter-1;
         if (counter < 0) counter = 0;
-        console.log(counter + " of " + theWords.length);
+        //console.log(counter + " of " + theWords.length);
         $(".flipbox").flippy({
             color_target: theColour, //"red",
             direction: "right",
@@ -38,11 +37,11 @@ $(function(){
     
     $("#btn-next").on("click",function(e){
         counter = counter+1;
-        console.log(counter + " of " + theWords.length);
+        //console.log(counter + " of " + theWords.length);
         var text = "<span class=\"big\">" + theWords[counter] + "</span>";
         if (counter>theWords.length-1) {
             counter = theWords.length - 1;
-            console.log('end');
+            //console.log('end');
             text = "<div id=\"right-content\"><img src=\"http://lorempixel.com/610/300/cats\" alt=\"placeholder\"/></div>";
         }
 
@@ -57,7 +56,7 @@ $(function(){
     
     $("#btn-last").on("click",function(e){
         counter = theWords.length;
-        console.log(counter + " of " + theWords.length);
+        //console.log(counter + " of " + theWords.length);
         $(".flipbox").flippy({
             color_target: theColour, // "#03588C",
             direction: "bottom",
