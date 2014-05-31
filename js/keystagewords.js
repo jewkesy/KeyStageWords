@@ -2,6 +2,7 @@ var theWords = [];
 var counter = 0;
 var theColour = "";
 var wordCount = 10;
+var flipSpeed = "750";
 
 $(function(){
     $("#btn-reverse").on("click",function(e){
@@ -16,7 +17,7 @@ $(function(){
         $(".flipbox").flippy({
             color_target: theColour, //"red",
             direction: "left",
-            duration: "750",
+            duration: flipSpeed,
             verso: "<span class=\"big\">" + theWords[counter] + "</span>",
          });
          e.preventDefault();
@@ -29,7 +30,7 @@ $(function(){
         $(".flipbox").flippy({
             color_target: theColour, //"red",
             direction: "right",
-            duration: "750",
+            duration: flipSpeed,
             verso: "<span class=\"big\">" + theWords[counter] + "</span>",
          });
          e.preventDefault();
@@ -48,7 +49,7 @@ $(function(){
         $(".flipbox").flippy({
             color_target: theColour, //"#b6d635",
             direction: "top",
-            duration: "750",
+            duration: flipSpeed,
             verso: text,
          });
          e.preventDefault();
@@ -60,7 +61,7 @@ $(function(){
         $(".flipbox").flippy({
             color_target: theColour, // "#03588C",
             direction: "bottom",
-            duration: "750",
+            duration: flipSpeed,
             verso: "<div id=\"right-content\"><img src=\"http://lorempixel.com/610/300/cats\" alt=\"placeholder\"/></div>",
          });
          e.preventDefault();
@@ -138,7 +139,7 @@ function loadWords(level, count) {
     $(".flipbox").flippy({
         color_target: theColour,
         direction: "bottom",
-        duration: "750",
+        duration: flipSpeed,
         verso: "<span class=\"big\">" + theWords[0] + "</span>",
      });
     $("#wrapper").show('fast');
