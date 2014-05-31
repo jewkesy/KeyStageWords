@@ -135,7 +135,6 @@ function loadWords(level, count) {
     $(".flipbox").html();
     //$(".flipbox").html("<span class=\"big " + level + "\">" + theWords[0] + "</span>");
 
-
     $(".flipbox").flippy({
         color_target: theColour,
         direction: "bottom",
